@@ -7,13 +7,18 @@ for i in m:
     l = 0
     r = len(s)-1
     mid = (l+r)//2
-    while i != s[mid]:
+    for q in s:
+        if r < l:
+            break
         if i > s[mid]:
             l = s[mid]+ 1
         else:
             r = s[mid]-1
-    if i == s[mid]:
-        print('YES')
-    else:
+        mid = (l + r) // 2
+        if r < l:
+            break
+        if i == s[mid]:
+            print('YES')
+
+    if i != s[mid]:
         print('NO')
-print(s)
