@@ -7,18 +7,21 @@ for i in m:
     l = 0
     r = len(s)-1
     mid = (l+r)//2
-    for q in s:
+    for q in range(len(s)):
+        if i == s[mid]:
+            break
         if r < l:
             break
         if i > s[mid]:
-            l = s[mid]+ 1
+            l = mid+ 1
         else:
-            r = s[mid]-1
+            r = mid-1
         mid = (l + r) // 2
         if r < l:
             break
-        if i == s[mid]:
-            print('YES')
+
 
     if i != s[mid]:
         print('NO')
+    else:
+        print('YES')
