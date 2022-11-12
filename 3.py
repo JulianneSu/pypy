@@ -6,6 +6,7 @@ s = [i for i in range(1,n+1)]
 l = 0
 r = (n - 1)
 m = (l + r) // 2
+print(s)
 while a!= s[m] and l<r:
         k+=1
         if a < s[m]:
